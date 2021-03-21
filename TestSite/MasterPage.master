@@ -1,0 +1,51 @@
+<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>MTR SmartNET</title>
+    <base href='<%=Page.ResolveUrl("~/")%>'/>
+
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs4-4.1.1/jqc-1.12.4/jszip-2.5.0/dt-1.10.24/b-1.7.0/b-html5-1.7.0/date-1.0.2/datatables.min.css"/>
+ 
+    <asp:ContentPlaceHolder ID="Head" runat="server" />
+</head>
+<body>
+    <form id="form1" runat="server">
+    
+        <header class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow">
+          <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3" href="#">Unit Data</a>
+          <button class="navbar-toggler position-absolute d-md-none collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </header>
+        <div class="container-fluid">
+            <div class="row">
+                <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
+                  <div class="position-sticky pt-3">
+                    <ul class="nav flex-column">
+                      <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">
+                          <span data-feather="home"></span>
+                          Home
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </nav>
+
+                <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+                    <asp:ContentPlaceHolder ID="Main" runat="server" />
+                </main>
+            </div>
+        </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/pdfmake.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/vfs_fonts.js"></script>
+        <script src="https://cdn.datatables.net/v/bs4-4.1.1/jqc-1.12.4/jszip-2.5.0/dt-1.10.24/b-1.7.0/b-html5-1.7.0/date-1.0.2/datatables.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    </form>
+    <div style="display: none">
+        <asp:ContentPlaceHolder ID="HiddenContent" runat="server"/>
+        <script>feather.replace()</script>
+    </div>
+</body>
+</html>
