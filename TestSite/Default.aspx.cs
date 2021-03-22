@@ -17,5 +17,10 @@ public partial class DefaultPage : Page
     {
         using var db = DbUtils.CreateConnection();
         ReadingTable.Readings = await db.GetAllReadings();
+        if (IsPostBack) return;
+        foreach (var area in await db.GetAllAreas())
+        {
+            SelectArea.Items.Add(new ListItem(area.Name, JsonSerializer.Serialize(area.Units)));
+        }
     }
 }
