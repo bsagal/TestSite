@@ -6,6 +6,7 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "TestSite", "TestSite\", "{879D4D59-554E-4341-9CE5-934911476FEA}"
 	ProjectSection(WebsiteProperties) = preProject
 		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.7.2"
+		ProjectReferences = "{43b97280-9b40-4f7a-99e2-8b7c41399960}|TestSite.Data.dll;"
 		Debug.AspNetCompiler.VirtualPath = "/localhost_50770"
 		Debug.AspNetCompiler.PhysicalPath = "TestSite\"
 		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_50770\"
@@ -25,6 +26,8 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "TestSite", "TestSite\", "{8
 		DefaultWebSiteLanguage = "Visual C#"
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestSite.Data", "TestSite.Data\TestSite.Data.csproj", "{43B97280-9B40-4F7A-99E2-8B7C41399960}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -35,6 +38,10 @@ Global
 		{879D4D59-554E-4341-9CE5-934911476FEA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{879D4D59-554E-4341-9CE5-934911476FEA}.Release|Any CPU.ActiveCfg = Debug|Any CPU
 		{879D4D59-554E-4341-9CE5-934911476FEA}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{43B97280-9B40-4F7A-99E2-8B7C41399960}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{43B97280-9B40-4F7A-99E2-8B7C41399960}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{43B97280-9B40-4F7A-99E2-8B7C41399960}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{43B97280-9B40-4F7A-99E2-8B7C41399960}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
